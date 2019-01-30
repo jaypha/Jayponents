@@ -32,33 +32,45 @@ composer require jaypha/jayponents
 
 ### class Component
 
-`__construct($template, $initialData)`
+`static void setDefaultEngine(TemplateEngineAdaptor $a)`
 
-Constructor for the `Component` class.  
-`$template` - The template file to use.  
+Sets the default template engine. If none is provided, then PHP will be used.
+
+`void setEngine(TemplateEngineAdaptor $a)`
+
+Sets the template engine to be used for this component. If none is set, then
+the default engine set via `setDefaultEngine` will be used.
 
 `void setTemplate(string $template = null)`
+
 Sets the template file or string (if possible)
 
 `void setVars(array $values)`
+
 Sets all the values.
 
 `void set(string $name, mixed $value)`
+
 Sets a single value
 
 `void remove(string $name)`
+
 Removes a value stored under $name.
 
 `void add(mixed $value)`
+
 Adds a value without a name. Useful when no template is being used.
 
 `void clear()`
+
 Removes all values.
 
 `void display()`
+
 Prints the contents directly to the output.
 
 `string __toString()`
+
 Returns the contents as a string.
 
 ### class PhpFileAdaptor
@@ -73,16 +85,6 @@ Adaptor to allow the PHP template to be passed directly as a string.
 
 Behaves the same as `Component` except that the template is provided directly
 instead of via a file.
-
-## Included Adaptors
-
-### class LatteTemplateEngineAdaptor
-
-Adaptor to use the Latte template engine.
-
-### class TwigTemplateEngineAdaptor
-
-Adaptor to use the Twig template engine.
 
 ## License
 
