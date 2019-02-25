@@ -3,23 +3,23 @@
 //
 //----------------------------------------------------------------------------
 
-use \Jaypha\Component;
+use Jaypha\Jayponents\Component;
+use Jaypha\Jayponents\PhpTextAdaptor;
 
 require "../vendor/autoload.php";
 
-$textEngine = new \Jaypha\PhpTextAdaptor();
+$textEngine = new PhpTextAdaptor();
 $page = new Component();
 $page->setTemplate('
 <body>
 <?php $content->display(); ?>
 </body>
 ');
-$page->setTemplateAdaptor($textEngine);
+$page->setEngine($textEngine);
 $page->set("title", "User Profile");
 
-$content = new Component(
-  "profile.tpl",
-);
+$content = new Component();
+$content->setTemplate("profile.tpl");
 $content->setVars([ "name" => "Jonathon", "word" => "ser&pity" ]);
 
 $page->set("content", $content);

@@ -3,16 +3,16 @@
 //
 //----------------------------------------------------------------------------
 
-use \Jaypha\Component;
+use Jaypha\Jayponents\Component;
 
 require "../vendor/autoload.php";
 
-$page = new Component("template.tpl");
+$page = new Component();
+$page->setTemplate("template.tpl");
 $page->set("title", "User Profile");
 
-$content = new Component(
-  "profile.tpl",
-);
+$content = new Component();
+$content->setTemplate("profile.tpl");
 $content->setVars([ "name" => "Jonathon", "word" => "ser&pity" ]);
 
 $page->set("content", $content);
