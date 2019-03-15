@@ -20,7 +20,7 @@ handle boilerplate you dont want to have repeated in every template file.
 
 ## Requirements
 
-PHP v5.4.0 or greater.
+PHP v7.1.0 or greater.
 
 ## Installation
 
