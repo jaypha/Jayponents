@@ -60,6 +60,9 @@ class Component
     else if (is_iterable($child))
       foreach ($child as $v)
         $this->displayChild($v);
+    // Must do this to avoid strings being interpereted as functions.
+    else if (is_string($child))
+      echo $child;
     else if (is_callable($child))
       echo $child();
     else

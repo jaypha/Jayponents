@@ -6,15 +6,14 @@ Construct documents with heirarchical components.
 
 ### Features
 
-- Usable with any template engine via adaptors. A PHP base template engine is
-included as the default.
+- Usable with any template engine via adaptors. Uses PHP by default.
 
 - Hierarchical. Components can be added to other Components
 to create docuemnts of arbitrary complexity. No need for partials, layouts or
 helpers as `Component` can be used for all of these roles.
 
-- You can create custom component classes that allow you to have extra
-component specific business logic that can be kept out of the template, or
+- You can create custom component classes that allow you to have extra,
+specific business logic that can be kept out of the template, or
 handle boilerplate you dont want to have repeated in every template file.
 
 
@@ -89,6 +88,5 @@ instead of via a file.
 ## License
 
 Copyright (C) 2017-8 Jaypha.  
-Distributed under the Boost Software License, Version 1.0.  
-See http://www.boost.org/LICENSE_1_0.txt
+Distributed under the [Boost Software License, Version 1.0](https://www.boost.org/LICENSE_1_0.txt).
 

@@ -47,6 +47,13 @@ class ComponentTest extends TestCase
     $c->setVars([ "abc" => "19", "mon" => $y ]);
     $this->assertEquals("12319xyzpokemonpoketop.\n", $c);
   }
+
+  function testStringOverFunction()
+  {
+    $y = new Component();
+    $y->add("next");
+    $this->assertEquals("next", $y->__toString());
+  }
 }
 
 //----------------------------------------------------------------------------

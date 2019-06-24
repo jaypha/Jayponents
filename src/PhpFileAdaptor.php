@@ -11,7 +11,7 @@ class PhpFileAdaptor implements TemplateEngineAdaptor
   {
     // Get the layout from a text template
     extract($component->getVars());
-    include($component->getTemplate();
+    include($component->getTemplate());
   }
 }
 
